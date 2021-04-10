@@ -1,10 +1,13 @@
-import React from "react";
+import React from 'react';
+import './app.css';
 
 const App = () =>{
         return (
-            <div>
-                <p>Earthquake Zen Garden</p>
+           <>
+            <div className="header">
+                <h1>Earthquake Zen Garden</h1>
             </div>
+           </>
         );
 }
 
