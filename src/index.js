@@ -1,9 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App.js";
-import '../src/app.css';
+import App from "./App";
+import './app.css';
 
 
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>,
+    rootElement
+);
