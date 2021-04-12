@@ -9,7 +9,7 @@ const Profile = () => {
                 return (
                     <main key={key}>
                         <h2>Profile</h2>
-                        <div className="container-profile">
+                        <div className="container">
                             <div className="avatar-image">
                                 <img src={data.profile.avatarImage} alt="Small version of your avatar"/>
                             </div>

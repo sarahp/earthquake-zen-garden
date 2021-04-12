@@ -12,6 +12,7 @@ h1 {
     text-align: center;
     padding-top: 25px;
     margin: 0;
+    color: #777777;
 }
 
 h2 {
@@ -23,7 +24,13 @@ ul {
 }
 
 .logo img {
-    width: 40px;
+    width: 50px;
+    margin: -34px 15px 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -38,11 +45,6 @@ ul {
 .avatar-image img {
     width: 200px;
     margin: 10px;
-}
-
-.container-profile {
-    display: flex;
-    justify-content: center;
 }
 
 table.profile-info h4 {

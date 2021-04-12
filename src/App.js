@@ -22,13 +22,13 @@ const App = () =>{
                    {siteData.map((data, key) => {
                        return (
                             <header key={key}>
-                              <Link to="/list" className="home-link"><h1>{data.site.title}</h1>
+                              <h1>{data.site.title}</h1>
 
                                 <div className="logo">
-                                    <img src={data.site.logoImage} alt="red and white R logo for Realtor.com" />
+                                    <Link to="/list" className="home-link"><img src={data.site.logoImage} alt="red and white R logo for Realtor.com" />                              </Link>
+
                                 </div>
                                 <Link to="/profile" className="profile-link">Welcome {data.profile.firstName}</Link>
-                              </Link>
                             </header>
                        );
                    })}
