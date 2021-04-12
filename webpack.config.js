@@ -4,7 +4,8 @@ module.exports = {
     entry: "./src/index.js",
     output: {
         path: path.resolve(__dirname, "build"),
-        filename: "bundle.js"
+        filename: "bundle.js",
+        publicPath: "/"
     },
     module: {
         rules: [
@@ -15,23 +16,14 @@ module.exports = {
                     loader: "babel-loader"
                 }
             },
-            {
-                test: /\.css$/,
-                loader: 'style-loader'
-            }, {
-                test: /\.css$/,
-                loader: 'css-loader',
-                query: {
-                    importLoaders: 1,
-                    modules: true
-                }
-            }
+            { test: /\.css$/, loader: "style-loader!css-loader" }
         ]
     },
     devServer: {
         contentBase: path.resolve(__dirname, "public"),
         port: 3000,
-        publicPath: "/build/",
+        publicPath: "/build",
+        historyApiFallback: true,
         open: true,
         overlay: true
     }

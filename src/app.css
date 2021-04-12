@@ -1,3 +1,64 @@
+/* General styles */
+body {
+    margin: 0;
+}
+header {
+    background-color: #ededed;
+    width: 100vw;
+    height: 100px;
+}
+
 h1 {
-    color: red;
+    text-align: center;
+    padding-top: 25px;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.logo img {
+    width: 40px;
+}
+
+
+/* Profile Styles */
+
+.profile-link {
+    float: right;
+    margin-top: -40px;
+    margin-right: 40px;
+}
+
+.avatar-image img {
+    width: 200px;
+    margin: 10px;
+}
+
+.container-profile {
+    display: flex;
+    justify-content: center;
+}
+
+table.profile-info h4 {
+    width: 100px;
+    margin: 5px;
+}
+
+table.profile-info p {
+    width: 300px;
+    margin: 5px;
+ }
+
+td.bio-label {
+    vertical-align: top;
+}
+
+td {
+    height: 15px;
 }

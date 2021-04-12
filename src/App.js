@@ -1,13 +1,51 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import './app.css';
+import {siteData} from './data.js';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    Redirect
+} from "react-router-dom";
+import Detail from './Detail.js';
+import List from './List.js';
+import Profile from './Profile.js';
 
 const App = () =>{
+
+
+
         return (
+            <Router>
            <>
-            <div className="header">
-                <h1>Earthquake Zen Garden</h1>
-            </div>
+                   {siteData.map((data, key) => {
+                       return (
+                            <header key={key}>
+                              <Link to="/list" className="home-link"><h1>{data.site.title}</h1>
+
+                                <div className="logo">
+                                    <img src={data.site.logoImage} alt="red and white R logo for Realtor.com" />
+                                </div>
+                                <Link to="/profile" className="profile-link">Welcome {data.profile.firstName}</Link>
+                              </Link>
+                            </header>
+                       );
+                   })}
            </>
+                <Switch>
+                    <Route path="/profile">
+                    <Profile />
+                </Route>
+                    <Route path="/detail">
+                        <Detail />
+                    </Route>
+                    <Route path="/list">
+                        <List />
+                    </Route>
+                    <Redirect from="/" to="/list" />
+                </Switch>
+            </Router>
         );
 }
 
