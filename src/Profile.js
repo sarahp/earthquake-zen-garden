@@ -14,6 +14,7 @@ const Profile = () => {
                                 <img src={data.profile.avatarImage} alt="Small version of your avatar"/>
                             </div>
                             <table className="profile-info">
+                                <tbody>
                                 <tr>
                                     <td><h4>First name</h4></td>
                                     <td><p>{data.profile.firstName}</p></td>
@@ -34,6 +35,7 @@ const Profile = () => {
                                     <td className="bio-label"><h4>Bio</h4></td>
                                     <td><p>{data.profile.bio}</p></td>
                                 </tr>
+                                </tbody>
                             </table>
                         </div>
                     </main>

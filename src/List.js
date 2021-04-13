@@ -1,38 +1,57 @@
-import React from 'react';
+import React from "react";
 import './app.css';
 import {siteData} from "./data";
 import {Link} from "react-router-dom";
 
 const List = () => {
+
+    const json = JSON.stringify(siteData);
+    console.log(json);
+
+   {siteData.map((item, index) => (
+        <div key={index}>
+            <h1>{item.data.metadata.title}</h1>
+            {item.data.features.map((c, i) => (
+                <div key={i}>
+                    <h3>{c.description}</h3>
+                    <hr />
+                </div>
+            ))}
+        </div>
+    ))};
+
+    console.log();
+
+
     return (
         <>
-            {siteData.map((data, key) => {
+            {siteData.map((item, index) => {
                 return (
-                        <main key={key}>
-                            <h2>{data.data.metadata.title}</h2>
-                            <div className="container">
+                    <main key={index}>
+                        <h2>{item.data.metadata.title}</h2>
+                        <div className="container">
                             <table>
                                 <thead>
-                                <th>Title</th>
-                                <th>Magnitude</th>
-                                <th>Time</th>
-                                </thead>
-                                <tbody>
                                 <tr>
-                                    <td>
-                                        <Link to="/detail/{data.data.">{data.data.features.properties}</Link>
-                                    </td>
-                                    <td>
-                                        {data.data.features.mag}
-                                    </td>
-                                    <td>
-                                        {data.data.features.time}
-                                    </td>
+                                    <th>Title</th>
+                                    <th>Magnitude</th>
+                                    <th>Time</th>
                                 </tr>
-                                </tbody>
+                                </thead>
+                                {item.data.features.map((c, i) => (
+                                    <tbody key={i}>
+                                    <tr>
+
+                                        <td><Link to="/detail/{c.id}">{c.properties.place}</Link></td>
+                                        <td>{c.properties.mag}</td>
+                                        <td>{c.properties.time}</td>
+                                        <td>{c.id}</td>
+                                    </tr>
+                                    </tbody>
+                                ))}
                             </table>
-                            </div>
-                        </main>
+                        </div>
+                    </main>
                 );
             })}
 

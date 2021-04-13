@@ -8,17 +8,17 @@ const Detail = () => {
             {siteData.map((data, key) => {
                 return (
                         <main key={key}>
-                            <h2>{data.data.features.place}</h2>
+                            <h2>{data.data.metadata.title}</h2>
                             <div className="container">
                             <table>
                                 <tbody>
                                 <tr>
                                    <td>Title</td>
-                                    <td>{data.data.features.place}</td>
+                                    <td>{data.data.features.mag}</td>
                                 </tr>
                                 <tr>
                                     <td>Magnitude</td>
-                                    <td>{data.data.features.mag}</td>
+                                    <td>{data.data.mag}</td>
                                 </tr>
 
                                 <tr>
