@@ -2,6 +2,8 @@
 body {
     margin: 0;
 }
+
+
 header {
     background-color: #ededed;
     width: 100vw;
@@ -33,6 +35,16 @@ ul {
     justify-content: center;
 }
 
+/* Table Styles */
+
+td.mag {
+    text-align: center;
+}
+
+td {
+    padding: 0 20px;
+    height: 15px;
+}
 
 /* Profile Styles */
 
@@ -59,8 +71,4 @@ table.profile-info p {
 
 td.bio-label {
     vertical-align: top;
-}
-
-td {
-    height: 15px;
 }

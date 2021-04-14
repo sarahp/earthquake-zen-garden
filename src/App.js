@@ -38,6 +38,9 @@ const App = () =>{
                     <Route path="/profile">
                         <Profile />
                     </Route>
+                    <Route path="/detail">
+                        <Detail />
+                    </Route>
                     <Route path="/list">
                         <List />
                     </Route>

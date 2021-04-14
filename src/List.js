@@ -25,8 +25,8 @@ const List = () => {
                                     <tbody key={i}>
                                     <tr>
 
-                                        <td><Link to="/detail/:{c.id}">{c.properties.place}</Link></td>
-                                        <td>{c.properties.mag}</td>
+                                        <td><Link to="/detail/">{c.properties.place}</Link></td>
+                                        <td className="mag">{c.properties.mag}</td>
                                         <td>{dateFormat(c.properties.time, "mmmm dS, yyyy, h:MM TT")}</td>
                                     </tr>
                                     </tbody>
