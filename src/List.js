@@ -2,26 +2,9 @@ import React from "react";
 import './app.css';
 import {siteData} from "./data";
 import {Link} from "react-router-dom";
+import dateFormat from "dateformat";
 
 const List = () => {
-
-    const json = JSON.stringify(siteData);
-    console.log(json);
-
-   {siteData.map((item, index) => (
-        <div key={index}>
-            <h1>{item.data.metadata.title}</h1>
-            {item.data.features.map((c, i) => (
-                <div key={i}>
-                    <h3>{c.description}</h3>
-                    <hr />
-                </div>
-            ))}
-        </div>
-    ))};
-
-    console.log();
-
 
     return (
         <>
@@ -42,10 +25,9 @@ const List = () => {
                                     <tbody key={i}>
                                     <tr>
 
-                                        <td><Link to="/detail/{c.id}">{c.properties.place}</Link></td>
+                                        <td><Link to="/detail/:{c.id}">{c.properties.place}</Link></td>
                                         <td>{c.properties.mag}</td>
-                                        <td>{c.properties.time}</td>
-                                        <td>{c.id}</td>
+                                        <td>{dateFormat(c.properties.time, "mmmm dS, yyyy, h:MM TT")}</td>
                                     </tr>
                                     </tbody>
                                 ))}

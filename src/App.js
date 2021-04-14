@@ -6,7 +6,8 @@ import {
     Switch,
     Route,
     Link,
-    Redirect
+    Redirect,
+    useParams
 } from "react-router-dom";
 import Detail from './Detail.js';
 import List from './List.js';
@@ -35,10 +36,7 @@ const App = () =>{
            </>
                 <Switch>
                     <Route path="/profile">
-                    <Profile />
-                </Route>
-                    <Route path="/detail">
-                        <Detail />
+                        <Profile />
                     </Route>
                     <Route path="/list">
                         <List />
@@ -48,5 +46,7 @@ const App = () =>{
             </Router>
         );
 }
+
+
 
 export default App;
