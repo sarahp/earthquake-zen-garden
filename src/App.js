@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React from 'react';
 import './app.css';
 import {siteData} from './data.js';
 import {
@@ -6,16 +6,13 @@ import {
     Switch,
     Route,
     Link,
-    Redirect,
-    useParams
+    Redirect
 } from "react-router-dom";
 import Detail from './Detail.js';
 import List from './List.js';
 import Profile from './Profile.js';
 
 const App = () =>{
-
-
 
         return (
             <Router>

@@ -4,6 +4,7 @@ import {siteData} from "./data";
 import {Link} from "react-router-dom";
 import dateFormat from "dateformat";
 
+
 const List = () => {
 
     return (
@@ -24,7 +25,6 @@ const List = () => {
                                 {item.data.features.map((c, i) => (
                                     <tbody key={i}>
                                     <tr>
-
                                         <td><Link to="/detail/">{c.properties.place}</Link></td>
                                         <td className="mag">{c.properties.mag}</td>
                                         <td>{dateFormat(c.properties.time, "mmmm dS, yyyy, h:MM TT")}</td>

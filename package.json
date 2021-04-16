@@ -13,8 +13,10 @@
   "dependencies": {
     "dateformat": "^4.5.1",
     "react": "^16.8.6",
+    "react-bootstrap": "^1.5.2",
     "react-dom": "^16.8.6",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "react-table": "^7.6.3"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",

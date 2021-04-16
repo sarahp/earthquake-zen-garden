@@ -4,6 +4,7 @@ import {siteData} from "./data";
 import dateFormat from "dateformat";
 
 const Detail = () => {
+
     return (
         <>
             {siteData.map((item, index) => {
